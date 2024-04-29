@@ -32,11 +32,11 @@ html {
 body {
   --heading-font: 'Roboto Condensed', sans-serif;
   --heading-font-weight: 700;
-  --heading-color: #313131;
+  --heading-color: #FF914D;
   --heading-line-height: 1.24;
 
-  --accent-color: #D06051;
-  --linear-gradient: linear-gradient(90deg, #C62813 0%, #D06051 100%);
+  --accent-color: #FFFFFF;
+  --linear-gradient: linear-gradient(90deg, #FF914D 0%, #c44f07 100%);
 
 
   /* bootstrap */
@@ -44,12 +44,12 @@ body {
   --bs-body-font-size: 18px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6875rem;
-  --bs-body-color: #777777;
+  --bs-body-color: #FFFFFF;
   --bs-body-color-rgb: 143, 143, 143;
 
-  --bs-primary: #8C907E;
+  --bs-primary: #FF914D;
   --bs-secondary: #6c757d;
-  --bs-black: #313131;
+  --bs-black: #292929;
   --bs-light: #FFFFFF;
   --bs-dark: #212529;
   --bs-gray: #D9D9D9;
@@ -67,7 +67,28 @@ body {
   --bs-link-hover-color: #111;
   --bs-link-hover-color-rgb: 17, 17, 17;
 
+  background-color: #292929;
 }
+
+#hero{
+  background-image: url(images/banner_3.jpg);
+  background-size: cover; /* This property ensures the image covers the entire background */
+  background-repeat: no-repeat; /* This property ensures the image doesn't repeat */
+  width: auto; /* Custom width */
+  height: 100vh; /* Custom height */
+}
+
+section {
+  width: auto;
+  height: 100%;
+  padding: 20px; /* Adjust padding as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center content vertically */
+  
+}
+
 
 h1,
 .h1,
@@ -117,12 +138,12 @@ a {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
+  --bs-btn-color: #FF914D;
   --bs-btn-bg: #fff;
-  --bs-btn-border-color: #fff;
+  --bs-btn-border-color: #292929;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #fff;
-  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-hover-bg: #292929;
+  --bs-btn-hover-border-color: #292929;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #fff;
@@ -134,7 +155,7 @@ a {
 }
 
 .btn-primary {
-  background-image: linear-gradient(to right, #C62813 0%, #D06051 51%, #C62813 100%);
+  background-image: linear-gradient(to right, #212123 0%, #4b4747 51%, #212123 100%);
   background-size: 200% auto;
   border: none;
   transition: 0.7s all;
@@ -149,11 +170,12 @@ a {
 /*---- navigation section style start ----*/
 
 .navbar {
+  
   font-family: var(--heading-font);
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: var(--bs-black);
-  --bs-navbar-hover-color: var(--accent-color);
+  --bs-navbar-color: var(--bs-light);
+  --bs-navbar-hover-color: var(--bs-primary);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
   --bs-navbar-active-color: var(--accent-color);
   --bs-navbar-brand-padding-y: 0.3125rem;
@@ -161,16 +183,28 @@ a {
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  background-color: #212123 ;
 }
 
 .nav-link {
   font-size: 1rem;
   font-weight: 700;
+  color: var(--accent-color);
+  
+}
+
+.nav-link:hover {
+  color: var(--bs-primary)
 }
 
 nav.navbar {
   z-index: 999999;
 }
+
+.offcanvas {
+  background-color: #212123; /* Black color */
+}
+
 
 
 /* dropdown style  */
@@ -249,7 +283,7 @@ img.logo-image:hover {
 /*---- testimonial section style start ----*/
 
 section#testimonial {
-  background: linear-gradient(90deg, #C62813 0%, #D06051 100%);
+  background: linear-gradient(90deg, #FF914D 0%, #FF914D 100%);
 }
 
 .testimonial-pattern-overlay.pattern-right {
@@ -263,7 +297,7 @@ section#testimonial {
 }
 
 .testimonial-content {
-  background: #F9E9E9;
+  background: #292929;
 }
 
 iconify-icon.rate {
@@ -287,7 +321,7 @@ iconify-icon.rate {
 
 iconify-icon.services-icon {
   font-size: 80px;
-  color: var(--accent-color);
+  color: var();
   transition: all 0.5s ease-in;
 }
 
@@ -320,7 +354,7 @@ iconify-icon.services-icon {
 /*---- projects section style start ----*/
 
 section#projects {
-  background: var(--accent-color);
+  background: var(--bs-black);
 }
 
 button.filter-button {
@@ -352,7 +386,7 @@ button.filter-button:hover {
   left: 15px;
   z-index: 5;
   opacity: 0;
-  background: rgba(255, 255, 255, 0.90);
+  /*background: rgba(255, 255, 255, 0.90);*/
   transition: all 0.5s ease-in;
 }
 
@@ -408,7 +442,12 @@ iconify-icon.process-icon {
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-btn-icon: url('https://api.iconify.design/ion/caret-down.svg?color=%23d06051&width=30');
   --bs-accordion-btn-active-icon: url('https://api.iconify.design/ion/caret-down.svg?color=%23d06051&width=30');
-  --bs-accordion-border-radius: 0px;
+  --bs-accordion-border-radius: 1px;
+  
+}
+
+.accordion-item{
+  background-color: var(--bs-black);
 }
 
 .accordion-header {
@@ -464,18 +503,18 @@ section#cta {
 /*---- footer section style start ----*/
 
 iconify-icon.contact-icon {
-  color: var(--bs-black);
+  color: var(--bs-primary);
   font-size: 24px;
 }
 
 iconify-icon.social-link-icon {
-  color: rgba(208, 96, 81, 0.60);
+  color: var(--accent-color);
   font-size: 24px;
 }
 
 iconify-icon.social-link-icon.active,
 iconify-icon.social-link-icon:hover {
-  color: #D06051;
+  color: var(--bs-primary);
 }
 
 
